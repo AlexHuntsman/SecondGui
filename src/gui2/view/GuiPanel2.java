@@ -1,9 +1,15 @@
+
 package gui2.view;
 
 import javax.swing.JPanel;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 import javax.swing.SpringLayout;
+
+import java.awt.Color;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.color.*;
 
 import gui2.controller.GuiController2;
 /**
@@ -33,15 +39,15 @@ public class GuiPanel2 extends JPanel
 		setupLayout();
 		setupListeners();
 	}
-	
 	private void setupPanel()
 	{
 		this.setLayout(baseLayout2);
+		this.setBackground(Color.MAGENTA);
 		this.add(firstButton2);
 		this.add(firstTextField2);
 	}
 	
-	private void setupLayout() //where the code fromthe design tab gos.
+	private void setupLayout() //where the code from the design tab gos.
 	{
 		baseLayout2.putConstraint(SpringLayout.EAST, firstButton2, -148, SpringLayout.EAST, this);
 		baseLayout2.putConstraint(SpringLayout.NORTH, firstButton2, 43, SpringLayout.SOUTH, firstTextField2);
@@ -58,8 +64,6 @@ public class GuiPanel2 extends JPanel
 			{
 				firstTextField2.setText("Very Wow! much Doge");
 			}
-		});		
-		
+		});			
 	}
-	
 }
