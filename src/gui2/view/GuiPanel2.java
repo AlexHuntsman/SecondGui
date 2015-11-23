@@ -50,6 +50,16 @@ public class GuiPanel2 extends JPanel
 		
 	}
 	
+	private void changeRandomColor()
+	{
+		int red, green, blue;
+		red = (int) (Math.random()*256);
+		green = (int) (Math.random()*256);
+		blue = (int) (Math.random()*256);
+		
+		this.setBackground(new Color(red, green, blue));
+	}
+	
 	private void setupListeners()
 	{
 		firstButton2.addActionListener(new ActionListener()
@@ -64,27 +74,49 @@ public class GuiPanel2 extends JPanel
 		{
 			public void mouseClicked(MouseEvent click)
 			{
-				
+				//changeRandomColor();
 			}
 			
 			public void mouseEntered(MouseEvent entered)
 			{
-				
+				//changeRandomColor();
 			}
 			
 			public void mouseExited(MouseEvent exited)
 			{
-				
+				//changeRandomColor();
 			}
 			
 			public void mouseReleased(MouseEvent released)
 			{
-				
+				//changeRandomColor();
 			}
 			
 			public void mousePressed(MouseEvent pressed)
 			{
-				
+				//changeRandomColor();
+			}
+		});
+		
+		this.addMouseMotionListener(new MouseMotionListener()
+		{
+			public void mouseMoved(MouseEvent moved)
+			{
+				if(moved.isAltDown())
+				{
+					changeRandomColor();
+				}
+				firstTextField2.setText("Mouse X: " + moved.getX() + " Mouse Y: " + moved.getY());
+				if(Math.abs(moved.getX() - firstButton2.getX()) < 5 && 
+						Math.abs(moved.getY() - firstButton2.getY()) < 5)
+				{
+					firstButton2.setLocation((int) (Math.random() * 300), (int) (Math.random() * 300));
+				}
+			}
+			
+			public void mouseDragged(MouseEvent draged)
+			{
+				//changeRandomColor();
 			}
 		});
 	}
