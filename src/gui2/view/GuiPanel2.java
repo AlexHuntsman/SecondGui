@@ -1,17 +1,11 @@
 
 package gui2.view;
 
-import javax.swing.JPanel;
-import javax.swing.JButton;
-import javax.swing.JTextField;
-import javax.swing.SpringLayout;
-
+import javax.swing.*;
 import java.awt.Color;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import java.awt.color.*;
-
+import java.awt.event.*;
 import gui2.controller.GuiController2;
+
 /**
  * 
  * @author ahun0442
@@ -64,6 +58,34 @@ public class GuiPanel2 extends JPanel
 			{
 				firstTextField2.setText("Very Wow! much Doge");
 			}
-		});			
+		});	
+		
+		this.addMouseListener(new MouseListener()
+		{
+			public void mouseClicked(MouseEvent click)
+			{
+				
+			}
+			
+			public void mouseEntered(MouseEvent entered)
+			{
+				
+			}
+			
+			public void mouseExited(MouseEvent exited)
+			{
+				
+			}
+			
+			public void mouseReleased(MouseEvent released)
+			{
+				
+			}
+			
+			public void mousePressed(MouseEvent pressed)
+			{
+				
+			}
+		});
 	}
 }
