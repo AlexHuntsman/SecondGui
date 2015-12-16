@@ -107,8 +107,8 @@ public class GuiPanel2 extends JPanel
 					changeRandomColor();
 				}
 				firstTextField2.setText("Mouse X: " + moved.getX() + " Mouse Y: " + moved.getY());
-				if(Math.abs(moved.getX() - firstButton2.getX()) < 5 && 
-						Math.abs(moved.getY() - firstButton2.getY()) < 5)
+				if(Math.abs(moved.getX() - firstButton2.getX()) < 10 && 
+						Math.abs(moved.getY() - firstButton2.getY()) < 10)
 				{
 					firstButton2.setLocation((int) (Math.random() * 300), (int) (Math.random() * 300));
 				}
